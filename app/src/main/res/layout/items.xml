@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:transitionName="img"
+                tools:ignore="UnusedAttribute"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"/>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_load_photo"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_marginTop="70dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextTitle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Title"
+                android:textSize="17sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/img"
+                android:id="@+id/title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/source"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/colorTextTitle"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Source"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/time"
+                android:layout_below="@id/title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/source"
+                android:textColor="@color/colorTextTitle"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Time"/>
+            
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

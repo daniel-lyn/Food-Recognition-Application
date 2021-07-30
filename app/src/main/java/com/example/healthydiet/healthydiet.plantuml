@@ -1,0 +1,238 @@
+@startuml
+
+title __HEALTHYDIET's Class Diagram__\n
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Adapter {
+        - articles : List<Article>
+        - context : Context
+        + Adapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+        + setOnItemClickListener()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Adapter.MyViewHolder {
+        ~ author : TextView
+        ~ desc : TextView
+        ~ imageView : ImageView
+        ~ progressBar : ProgressBar
+        ~ publishedAt : TextView
+        ~ source : TextView
+        ~ time : TextView
+        ~ title : TextView
+        + MyViewHolder()
+        + onClick()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    interface com.example.healthydiet.Adapter.OnItemClickListener {
+        {abstract} + onItemClick()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.First2Fragment {
+        + onCreateView()
+        + onViewCreated()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Home {
+        + Logout()
+        + Maps()
+        + News()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.JsonParser {
+        + parseResult()
+        - parseJsonArray()
+        - parseJsonObject()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Login {
+        ~ fAuth : FirebaseAuth
+        ~ mCreate : TextView
+        ~ mEmail : EditText
+        ~ mLoginButton : Button
+        ~ mPassword : EditText
+        ~ mProgressBar : ProgressBar
+        + toCreate()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.MainActivity {
+        {static} - SPLASH_TIME_OUT : int
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.MapsActivity {
+        {static} - REQUEST_LOCATION_PERMISSION : int
+        - mMap : GoogleMap
+        + onCreateOptionsMenu()
+        + onMapReady()
+        + onOptionsItemSelected()
+        + onRequestPermissionsResult()
+        # onCreate()
+        - enableMyLocation()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.NewsDetailActivity {
+        - appBarLayout : AppBarLayout
+        - appbar_subtitle : TextView
+        - appbar_title : TextView
+        - date : TextView
+        - date_behavior : FrameLayout
+        - imageView : ImageView
+        - isHideTolbarView : boolean
+        - mAuthor : String
+        - mDate : String
+        - mImg : String
+        - mSource : String
+        - mTitle : String
+        - mUrl : String
+        - time : TextView
+        - title : TextView
+        - titleAppbar : LinearLayout
+        - toolbar : Toolbar
+        + onBackPressed()
+        + onOffsetChanged()
+        + onSupportNavigateUp()
+        # onCreate()
+        - initWebView()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.PermissionActivity {
+        - btn_grant : Button
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Register {
+        ~ fAuth : FirebaseAuth
+        ~ mEmail : EditText
+        ~ mLogin : TextView
+        ~ mName : EditText
+        ~ mPassword : EditText
+        ~ mProgressBar : ProgressBar
+        ~ mRegisterButton : Button
+        + toLogin()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Second2Fragment {
+        + onCreateView()
+        + onViewCreated()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.Utils {
+        {static} + vibrantLightColorList : ColorDrawable[]
+        {static} + DateFormat()
+        {static} + DateToTimeFormat()
+        {static} + getCountry()
+        {static} + getRandomDrawbleColor()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.apiClient {
+        {static} - BASE_URL : String
+        {static} - retrofit : Retrofit
+        {static} + getApiClient()
+        {static} + getUnsafeOkHttpClient()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    interface com.example.healthydiet.apiInterface {
+        {abstract} + getNews()
+    }
+  }
+  
+
+  namespace com.example.healthydiet {
+    class com.example.healthydiet.healthNewsActivity {
+        ~ API_KEY : String
+        - TAG : String
+        - articles : List<Article>
+        - layoutManager : LayoutManager
+        - recyclerView : RecyclerView
+        - swipeRefreshLayout : SwipeRefreshLayout
+        + LoadJson()
+        + onRefresh()
+        # onCreate()
+        - initListener()
+        - onLoadingSwipeRefresh()
+    }
+  }
+  
+
+  com.example.healthydiet.Adapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.healthydiet.Adapter o-- com.example.healthydiet.Adapter.OnItemClickListener : onItemClickListener
+  com.example.healthydiet.Adapter +-down- com.example.healthydiet.Adapter.MyViewHolder
+  com.example.healthydiet.Adapter +-down- com.example.healthydiet.Adapter.OnItemClickListener
+  com.example.healthydiet.Adapter.MyViewHolder .up.|> android.view.View.OnClickListener
+  com.example.healthydiet.Adapter.MyViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.healthydiet.Adapter.MyViewHolder o-- com.example.healthydiet.Adapter.OnItemClickListener : onItemClickListener
+  com.example.healthydiet.First2Fragment -up-|> androidx.fragment.app.Fragment
+  com.example.healthydiet.Home -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.Login -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.MapsActivity .up.|> com.google.android.gms.maps.OnMapReadyCallback
+  com.example.healthydiet.MapsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.NewsDetailActivity .up.|> com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
+  com.example.healthydiet.NewsDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.PermissionActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.Register -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.Second2Fragment -up-|> androidx.fragment.app.Fragment
+  com.example.healthydiet.healthNewsActivity .up.|> androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
+  com.example.healthydiet.healthNewsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.healthydiet.healthNewsActivity o-- com.example.healthydiet.Adapter : adapter
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

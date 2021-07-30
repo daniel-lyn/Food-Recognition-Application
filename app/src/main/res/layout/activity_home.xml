@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <Button
+        android:id="@+id/diaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Diary"
+        android:onClick="FoodDiary"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/Recognition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.733" />
+
+    <Button
+        android:id="@+id/newButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="News"
+        android:text="News"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/profileButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:onClick="Logout"
+        android:text="Logout"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.954" />
+
+    <Button
+        android:id="@+id/Recognition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Recognition"
+        android:text="Recognition"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/mapButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
+
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Profile"
+        android:text="View Profile"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Maps"
+        android:text="Restaurant"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/newButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
+
+    <Button
+        android:id="@+id/targetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Target"
+        android:onClick="Target"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintBottom_toTopOf="@+id/diaryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

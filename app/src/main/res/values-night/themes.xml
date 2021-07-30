@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HealthyDiet" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#289b35</item>
+        <item name="colorPrimaryVariant">#35b64f</item>
+        <item name="colorOnPrimary">#f9f9fa</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#289b35</item>
+        <item name="colorSecondaryVariant">#4e4e4e</item>
+        <item name="colorOnSecondary">#262626</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

@@ -1,0 +1,30 @@
+0 Waffle
+1 Tiramisu
+2 Tacos
+3 Sushi
+4 Steak
+5 Spring Roll
+6 Sashimi
+7 Spaghetti Carbonara
+8 Risotto
+9 Ramen
+10 Pork Chop
+11 Pizza
+12 Pho
+13 Peking Duck
+14 Pancake
+15 Pad Thai
+16 Oyster
+17 Onion Ring
+18 Omelette
+19 Macaron
+20 Lobster Bisque
+21 Ice Cream
+22 Hot Dog
+23 Hamburger
+24 Garlic Bread
+25 Fried Rice
+26 Donut
+27 Dumpling
+28 Chicken Wings
+29 Chicken Curry
