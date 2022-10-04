@@ -1,3 +1,5 @@
+#Food Recognition Application for Andriod Phone
+
 In this project, a mobile application will be developed for people to know more about their diet. 
 
 People both having packed lunch and having lunch at a restaurant can use this application as there will be mainly two parts of the application including food recognition and restaurants recommendation. 
