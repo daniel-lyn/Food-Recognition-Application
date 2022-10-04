@@ -1,4 +1,4 @@
-#Food Recognition Application for Andriod Phone
+# Food Recognition Application for Andriod Phone
 
 In this project, a mobile application will be developed for people to know more about their diet. 
 
